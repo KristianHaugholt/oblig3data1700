@@ -7,6 +7,8 @@ Github repo URL: https://github.com/KristianHaugholt/oblig3data1700
 
 Full Name: Karl Kristian Eide Haugholt
 
+Link to video: https://www.youtube.com/watch?v=TxlqrIne5Do
+
 Summary of code: 
 The program allows the user to buy tickets by clicking a button,
 given that the input data is valid.

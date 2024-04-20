@@ -11,17 +11,17 @@ public class homeController {
     @Autowired
     billettRepository rep;
 
-    @PostMapping("/lagre")
+    @PostMapping("/lagre")  //receives a ticket object from the client and runs a function from the repository file to save it to the db
     public void nyBillett(kinoBillett innBillett){
         rep.lagreBillett(innBillett);
     }
 
-    @GetMapping("/hentAlle")
+    @GetMapping("/hentAlle")    //makes a list of ticket objects and runs a function from the repository file to fill the list with all the tickets, and sends that list to the client
     public List<kinoBillett> hentAlle(){
         return rep.hentBilletter();
     }
 
-    @GetMapping("/slettAlle")
+    @GetMapping("/slettAlle")   //runs a function from the repository file to delete the tickets
     public void slettAlle(){
         rep.slettBilletter();
     }

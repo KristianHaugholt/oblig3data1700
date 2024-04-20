@@ -1,4 +1,4 @@
-$(function (){hentAlle()})
+$(function (){hentAlle()})              //function for getting the tickets if the site is refreshed
 
 function slettData(){                                   //function to clear the input fields
     $('#film').val('');
@@ -9,13 +9,13 @@ function slettData(){                                   //function to clear the 
     $('#epost').val('');
 }
 
-function  hentAlle(){
+function  hentAlle(){                       //sends a get request and then uses the data in the format function
     $.get("/hentAlle", function (data){
         formaterData(data);
     })
 }
 
-function formaterData(billetter){
+function formaterData(billetter){       //takes in the tickets as data and then formats them in a table with striped rows
     let ut ='<table class="table table-striped"><tr><th scope="col">Film</th><th scope="col">Antall</th><th scope="col">Fornavn</th>' +
         '<th scope="col">Etternavn</th><th scope="col">Telefonnr</th><th scope="col">Epost</th></tr>';
     for (const kinoBillett of billetter){
@@ -27,7 +27,7 @@ function formaterData(billetter){
     $('#alle-billetter').html(ut);
 }
 
-function slett(){
+function slett(){           //sends a get request that will delete all tickets in the db, and then maskes a table without any tickets
     $.get("/slettAlle", function(){
         $("#alle-billetter").html('<table class="table table-striped"><tr><th scope="col">Film</th><th scope="col">Antall</th><th scope="col">Fornavn</th>' +
             '<th scope="col">Etternavn</th><th scope="col">Telefonnr</th><th scope="col">Epost</th></tr></table>');
@@ -79,7 +79,7 @@ function kjop(){
         const nyBillett = new kinoBillett(film, antall, fornavn, etternavn, telefonNr, epost);
 
 
-        $.post("/lagre", nyBillett, function (){
+        $.post("/lagre", nyBillett, function (){    //sends a post request with the new ticket, and runs the function to update the page
             hentAlle();
         });
 
