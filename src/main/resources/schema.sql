@@ -1,4 +1,4 @@
-CREATE TABLE Kinobillett    --Creates the table with columns that match the attributes of the ticket object
+CREATE TABLE Kinobillett    --Creates a table with columns that match the attributes of the ticket object
 (
     film VARCHAR(30) NOT NULL,
     antall INTEGER,
