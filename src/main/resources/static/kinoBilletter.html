@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kinobilletter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Bestilling av kinobilletter</h1>
+
+    <!creating paragraphs with text, input, and an empty span element where text can be added with js>
+    <p><span>Film:</span> <input type="text" id="film"> <span class="text-danger" id="film-feil"></span></p>
+    <p><span>Antall:</span> <input type="text" id="antall"> <span class="text-danger" id="antall-feil"></span></p>
+    <p><span>Fornavn:</span> <input type="text" id="fornavn"> <span class="text-danger" id="fornavn-feil"></span></p>
+    <p><span>Etternavn:</span> <input type="text" id="etternavn"> <span class="text-danger" id="etternavn-feil"></span></p>
+    <p><span>Telefonnr:</span> <input type="text" id="telefonNr"> <span class="text-danger" id="telefon-feil"></span></p>
+    <p><span>Epost:</span> <input type="text" id="epost"> <span class="text-danger" id="epost-feil"></span></p>
+
+    <!buttons for adding and deleting tickets as well as header and empty paragraph where tickets will be added with js>
+    <button id="billett-kjop" class="btn btn-success">Kjøp billett</button>
+
+    <h2>Alle billetter</h2>
+    <p id="alle-billetter"></p>
+    <button id="billett-slett" class="btn btn-danger">Slett alle billettene</button>
+
+    <script src="kinoBilletter.js"></script>
+
+</body>
+</html>
