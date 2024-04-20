@@ -7,10 +7,13 @@ Github repo URL: https://github.com/KristianHaugholt/oblig3data1700
 
 Full Name: Karl Kristian Eide Haugholt
 
+Link to video: https://www.youtube.com/watch?v=TxlqrIne5Do
+
 Summary of code: 
 The program allows the user to buy tickets by clicking a button,
-given that the input data is valid.
-The data will then be saved to the h2 database with the use
+given that the input data is valid. The input is checked by
+checking if there is text for some fields, and with regular expressions
+for others. The data will then be saved to the h2 database with the use
 of a post request. Then it will follow up with a get request
 to get all the tickets from the database sorted by surnames,
 and format them into a table. The user can delete all tickets

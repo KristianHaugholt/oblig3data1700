@@ -1,12 +1,8 @@
 package data1700.oblig3;
 
-public class kinoBillett {
-    private  String film;
+public class kinoBillett {      //just a plain old java object for the tickets
+    private  String film, fornavn, etternavn, telefonNr, epost;
     private int antall;
-    private String fornavn;
-    private String etternavn;
-    private String telefonNr;
-    private String epost;
     public kinoBillett(String film, int antall, String fornavn, String etternavn,
                        String telefonNr, String epost){
         this.film=film;
